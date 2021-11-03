@@ -3,7 +3,7 @@
 ## Introduction
 
 NASA Astronomy Picture of the Day, a basic app that retrieves pictures from the NASA APOD API and displays them in a RecyclerView.
-Clicking each item displays up a detail screen.
+Clicking each item displays a detail screen.
 
 ## Tips
 
