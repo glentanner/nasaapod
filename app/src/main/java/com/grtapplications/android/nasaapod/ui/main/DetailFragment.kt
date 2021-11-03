@@ -1,22 +1,15 @@
 package com.grtapplications.android.nasaapod.ui.main
 
-import android.R.attr
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Scroller
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import coil.load
 import com.grtapplications.android.nasaapod.R
 import com.grtapplications.android.nasaapod.databinding.FragmentDetailBinding
-import android.R.attr.defaultValue
-
-
-
 
 class DetailFragment : Fragment() {
 
