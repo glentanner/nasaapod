@@ -12,6 +12,6 @@ interface DailyImageApi {
         @Query("start_date")
         @Query("end_date")
     */
-    @GET("/planetary/apod?api_key=${BuildConfig.API_KEY}&start_date=2021-10-28&end_date=2021-11-03")
+    @GET("/planetary/apod?api_key=${BuildConfig.API_KEY}&start_date=2021-11-01&end_date=2021-11-08")
     suspend fun getDailyImages(): Response<List<DailyImage>>
 }
