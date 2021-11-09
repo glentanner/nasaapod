@@ -5,6 +5,13 @@
 NASA Astronomy Picture of the Day, a basic app that retrieves pictures from the NASA APOD API and displays them in a list.
 Clicking each item displays a detail screen.
 
+## Demo Video
+
+![Demo Video](demo_video.mp4)
+<video width="320" height="240" controls>
+  <source src="demo_video.mp4" type="video/mp4">
+</video>
+
 ## Notes
 
 - The API key is stored in the local.properties file. You will need your own key.
