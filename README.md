@@ -3,7 +3,7 @@
 ## Introduction
 
 NASA Astronomy Picture of the Day, a basic app that retrieves pictures from the NASA APOD API and displays them in a list.
-Clicking each item displays a detail screen.
+Clicking each item displays a detail screen. The API key is stored in the local.properties file. You will need your own key. Built on Android Studio Artic Fox 2020.3.1 Patch 2
 
 ## Demo Video
 
