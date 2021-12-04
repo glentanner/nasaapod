@@ -1,11 +1,3 @@
-#built application files
-*.apk
-*.ap_
-*.aab
-
-# Local configuration file (sdk path, etc)
-local.properties
-
 # Android Studio
 *.iml
 .idea

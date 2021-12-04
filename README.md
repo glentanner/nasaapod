@@ -3,34 +3,39 @@
 ## Introduction
 
 NASA Astronomy Picture of the Day, a basic app that retrieves pictures from the NASA APOD API and displays them in a list.
-Clicking each item displays a detail screen. The API key is stored in the local.properties file. You will need your own key. Built on Android Studio Artic Fox 2020.3.1 Patch 2
+Clicking each item displays a detail screen.
+
+## API Key
+
+The API key is stored in the local.properties file. You should register and use your own API key [here](https://api.nasa.gov/). NASA provides a DEMO_KEY which is currently in the local.properties file. The DEMO_KEY is rate limitied to 30 requests per IP Address per hour, and 50 requests per IP Address per day. If you plan to exceed those limits, please register for your own key.
+
+- Example local.properties API Key entry: **apiKey="your_key"**
 
 ## Demo Video
 
 ![Demo Video](demo_video.mp4)
 <video width="320" height="240" controls>
+
   <source src="demo_video.mp4" type="video/mp4">
 </video>
 
-## Notes
-
-- The API key is stored in the local.properties file. You will need your own key.
-- Example local.properties API Key entry: **apiKey="your_key"**
-
 ## Requirements
+
 Create a single page site that lists the NASA Astronomy Picture of the Day for the past 7 days. Tapping on the list should display the image and description.
 
 ## Design
+
 Plan to first display a list of the past seven days of images to the user. Allow the user to press a list item and display detail about the daily image.
 
 ## Implementation
+
 The main activity will display a fragment with a recyclerview. Pressing an item list launches a detail fragment.
 The textview for the description (explanation) needs to scroll due to the length of the text.
 
 ## Testing
 
-
 ## Discussion
+
 This is a minimal viable product, but can be improved.
 
 - The single activity architecture model using fragments is the current best practice. It promotes one set of interactions with the lifecycle for the app and will make it easier to implement the navigation component, etc. in future versions.
@@ -39,6 +44,6 @@ This is a minimal viable product, but can be improved.
 - Some daily image urls are links to video. Coil is used to load images, and needs to be configured to handle the first frame of the video. Currently, a placeholder NASA logo is used whenever there is a video url.
 - The detail fragment could display more info including date, copyright, etc.
 - The recyclerview sends the url for the image and the explanation as strings in a bundle when the detail fragment is launched. The Detail Fragment should use shared data.
-- Navigation isn't implemented, but would improve the flow between fragments. 
+- Navigation isn't implemented, but would improve the flow between fragments.
 - A desktop widget that shows the current picture of the day would be nice.
 - A daily notification could be added when a new picture of the day is available.
