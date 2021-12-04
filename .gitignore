@@ -1,15 +1,16 @@
-*.iml
-.gradle
-gradle.properties
-gradle/
-gradlew
-gradlew.bat
-settings.gradle
-/local.properties
-/.idea/
-/build
-/captures
-.externalNativeBuild
-.cxx
+#built application files
+*.apk
+*.ap_
+*.aab
+
+# Local configuration file (sdk path, etc)
 local.properties
 
+# Android Studio
+*.iml
+.idea
+.gradle
+build/
+.navigation
+captures/
+output.json
