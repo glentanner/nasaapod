@@ -1,5 +1,7 @@
 package com.grtapplications.android.nasaapod.ui.main
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
@@ -42,18 +44,21 @@ class DetailFragment : Fragment() {
             ViewModelProvider(requireActivity())[MainViewModel::class.java]
         }
         viewModel?.dailyImages?.observe(viewLifecycleOwner, { dailyImages ->
-            if (mediaType != "image") {
-                binding.imageDetail.load(R.drawable.nasa) {
-                    crossfade(100)
-                }
-            }
-            else {
+            if (mediaType == "image") {
                 binding.imageDetail.load(url) {
                     crossfade(100)
                 }
             }
-            binding.explanationDetail.text = explanation
-            binding.explanationDetail.movementMethod = ScrollingMovementMethod()
+            else if (mediaType == "video") {
+                val youtubeIntent = Intent(Intent.ACTION_VIEW)
+                youtubeIntent.data = Uri.parse(url)
+                startActivity(youtubeIntent)
+            }
+            else {
+                binding.imageDetail.load(R.drawable.nasa) {
+                    crossfade(100)
+                }
+            }
         })
     }
 
