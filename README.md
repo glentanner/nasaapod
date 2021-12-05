@@ -12,11 +12,8 @@ The API key is stored in the local.properties file. You should register and use 
 - Example local.properties API Key entry: **apiKey="your_key"**
 
 ## Demo Video
-
 ![Demo Video](demo_video.mp4)
-<video width="320" height="240" controls>
-
-  <source src="demo_video.mp4" type="video/mp4">
+<video width="320" height="240" src="demo_video.mp4" type="video/mp4" controls>
 </video>
 
 ## Requirements
